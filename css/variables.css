@@ -1,0 +1,56 @@
+
+/* =========================================
+   STUDIO 01 — DESIGN SYSTEM
+   Variables globales
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+
+    /* COLORES PRINCIPALES */
+    --color-dark: #171918;
+    --color-dark-soft: #242825;
+    --color-ivory: #F2EFE8;
+    --color-white: #FFFFFF;
+
+    /* COLORES SECUNDARIOS */
+    --color-gray: #B8B9B2;
+    --color-muted: #777F78;
+    --color-sage: #778B7D;
+
+    /* BORDES */
+    --color-border-dark: #383D39;
+    --color-border-light: #DDDCD5;
+
+    /* TIPOGRAFÍAS */
+    --font-primary: 'DM Sans', sans-serif;
+    --font-display: 'Manrope', sans-serif;
+
+    /* TAMAÑOS */
+    --text-small: 0.875rem;
+    --text-base: 1rem;
+    --text-large: 1.25rem;
+
+    /* ESPACIADOS */
+    --section-spacing: 120px;
+    --container-width: 1280px;
+
+    /* BORDES REDONDEADOS */
+    --radius-small: 6px;
+    --radius-medium: 12px;
+    --radius-large: 20px;
+
+    /* TRANSICIONES */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.4s ease;
+    --transition-slow: 0.7s ease;
+}
+
+/* AJUSTES PARA PANTALLAS PEQUEÑAS */
+
+@media (max-width: 768px) {
+    :root {
+        --section-spacing: 80px;
+    }
+}

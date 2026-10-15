@@ -1,0 +1,28 @@
+
+[
+  {
+    "id": 1,
+    "name": "Diseño y desarrollo web",
+    "description": "Sitios web personalizados, modernos y adaptables a cualquier dispositivo."
+  },
+  {
+    "id": 2,
+    "name": "Rediseño de sitios web",
+    "description": "Renovamos la apariencia y experiencia de sitios existentes."
+  },
+  {
+    "id": 3,
+    "name": "Catálogos digitales",
+    "description": "Presentamos productos y servicios mediante experiencias digitales organizadas."
+  },
+  {
+    "id": 4,
+    "name": "Integraciones y funcionalidades",
+    "description": "Incorporamos herramientas y funciones según las necesidades de cada proyecto."
+  },
+  {
+    "id": 5,
+    "name": "Mantenimiento web",
+    "description": "Actualizaciones, mejoras y soporte para mantener tu sitio funcionando correctamente."
+  }
+]

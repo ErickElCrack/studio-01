@@ -1,0 +1,27 @@
+
+[
+    {
+        "id": 1,
+        "title": "MORNA",
+        "category": "Cafetería de especialidad",
+        "type": "Concepto independiente",
+        "description": "Una experiencia digital cálida y editorial para una cafetería de especialidad.",
+        "image": "",
+        "theme": "coffee",
+        "status": "En desarrollo",
+        "featured": true,
+        "url": ""
+    },
+    {
+        "id": 2,
+        "title": "AXIOM",
+        "category": "Automotive detailing",
+        "type": "Concepto independiente",
+        "description": "Una propuesta digital de estética oscura y sofisticada para un estudio automotriz.",
+        "image": "",
+        "theme": "automotive",
+        "status": "En desarrollo",
+        "featured": true,
+        "url": ""
+    }
+]
