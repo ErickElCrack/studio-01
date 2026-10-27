@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VERDE — Concepto de marca de estilo de vida natural, consciente y esencial.">
+    <title>VERDE — Live With Intention</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream: #f5f3eb;
+            --paper: #ebe9df;
+            --green: #344b3b;
+            --green-dark: #26382d;
+            --sage: #a7b39a;
+            --text: #29352b;
+            --muted: #747b70;
+            --line: rgba(52, 75, 59, .2);
+            --serif: "Playfair Display", Georgia, serif;
+            --sans: "DM Sans", sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+        body {
+            background: var(--cream);
+            color: var(--text);
+            font-family: var(--sans);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        img { display: block; max-width: 100%; }
+
+        .concept-banner {
+            padding: 10px 18px;
+            background: var(--green);
+            color: var(--cream);
+            text-align: center;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+        }
+
+        .container { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+
+        header {
+            height: 84px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        .logo span { color: #7b8c70; }
+
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+
+        .nav-links a {
+            color: #606c60;
+            font-size: 11px;
+            transition: color .2s;
+        }
+
+        .nav-links a:hover { color: var(--green); }
+
+        .nav-cta {
+            padding: 12px 17px;
+            border: 1px solid var(--green);
+            font-size: 11px;
+            transition: background .2s, color .2s;
+        }
+
+        .nav-cta:hover { background: var(--green); color: var(--cream); }
+
+        .hero {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            align-items: center;
+            gap: 64px;
+            padding-top: 75px;
+            padding-bottom: 82px;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #71836a;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 24px;
+            height: 1px;
+            background: #71836a;
+        }
+
+        h1 {
+            margin-top: 27px;
+            font-family: var(--serif);
+            font-size: clamp(53px, 6.4vw, 82px);
+            font-weight: 400;
+            line-height: 1.02;
+            letter-spacing: -3px;
+        }
+
+        h1 em {
+            color: #77886d;
+            font-weight: 400;
+        }
+
+        .hero-copy {
+            max-width: 390px;
+            margin-top: 24px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin-top: 31px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            min-height: 48px;
+            padding: 0 19px;
+            background: var(--green);
+            color: var(--cream);
+            font-size: 11px;
+            font-weight: 600;
+            transition: background .2s, transform .2s;
+        }
+
+        .button:hover {
+            background: var(--green-dark);
+            transform: translateY(-2px);
+        }
+
+        .text-link { font-size: 11px; }
+        .text-link span { margin-left: 6px; color: #71836a; }
+
+        .hero-visual {
+            position: relative;
+            min-height: 515px;
+            overflow: hidden;
+            background: #d6d9cc;
+        }
+
+        .hero-visual img {
+            width: 100%;
+            height: 515px;
+            object-fit: cover;
+            object-position: center;
+            transition: transform .8s;
+        }
+
+        .hero-visual:hover img { transform: scale(1.035); }
+
+        .image-caption {
+            position: absolute;
+            right: 17px;
+            bottom: 17px;
+            padding: 11px 14px;
+            background: rgba(245, 243, 235, .94);
+            color: var(--green);
+            font-size: 9px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .manifesto {
+            padding: 58px 0;
+            background: var(--green);
+            color: var(--cream);
+            text-align: center;
+        }
+
+        .manifesto .eyebrow { justify-content: center; color: #c0cbb6; }
+        .manifesto .eyebrow::before { background: #c0cbb6; }
+
+        .manifesto h2 {
+            max-width: 790px;
+            margin: 22px auto 0;
+            font-family: var(--serif);
+            font-size: clamp(30px, 4.4vw, 52px);
+            font-weight: 400;
+            line-height: 1.25;
+        }
+
+        .manifesto h2 em { color: #c2cdb6; }
+
+        section.content-section { padding: 110px 0; }
+
+        .section-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 42px;
+        }
+
+        .section-head h2 {
+            margin-top: 17px;
+            font-family: var(--serif);
+            font-size: clamp(36px, 4vw, 50px);
+            font-weight: 400;
+            line-height: 1.12;
+            letter-spacing: -1.5px;
+        }
+
+        .section-head p {
+            max-width: 340px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .collection-card { min-width: 0; }
+
+        .collection-image {
+            position: relative;
+            overflow: hidden;
+            background: var(--paper);
+        }
+
+        .collection-image img {
+            width: 100%;
+            height: 335px;
+            object-fit: cover;
+            transition: transform .7s;
+        }
+
+        .collection-card:hover .collection-image img { transform: scale(1.045); }
+
+        .collection-number {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            padding: 8px 10px;
+            background: var(--cream);
+            color: var(--green);
+            font-size: 9px;
+            letter-spacing: 1px;
+        }
+
+        .collection-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: 12px;
+            padding-top: 18px;
+        }
+
+        .collection-info h3 {
+            font-family: var(--serif);
+            font-size: 23px;
+            font-weight: 400;
+        }
+
+        .collection-info p {
+            margin-top: 7px;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        .collection-arrow { color: #71836a; font-size: 18px; }
+
+        .story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--paper);
+        }
+
+        .story-image { min-height: 480px; overflow: hidden; }
+
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            min-height: 480px;
+            object-fit: cover;
+        }
+
+        .story-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: clamp(30px, 5vw, 70px);
+        }
+
+        .story-copy h2 {
+            margin-top: 22px;
+            font-family: var(--serif);
+            font-size: clamp(36px, 4vw, 51px);
+            font-weight: 400;
+            line-height: 1.12;
+            letter-spacing: -1.5px;
+        }
+
+        .story-copy p {
+            margin-top: 19px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .story-copy .button { margin-top: 27px; }
+
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .principle {
+            padding: 27px 25px;
+            border-right: 1px solid var(--line);
+        }
+
+        .principle:first-child { padding-left: 0; }
+        .principle:last-child { border-right: 0; }
+
+        .principle h3 {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .principle p {
+            margin-top: 9px;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        .contact {
+            padding: 95px 0;
+            background: #dfe3d5;
+        }
+
+        .contact-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+        }
+
+        .contact h2 {
+            max-width: 700px;
+            margin-top: 20px;
+            font-family: var(--serif);
+            font-size: clamp(40px, 5.4vw, 65px);
+            font-weight: 400;
+            line-height: 1.08;
+            letter-spacing: -2px;
+        }
+
+        .contact p {
+            max-width: 420px;
+            margin-top: 17px;
+            color: #657064;
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .contact-button {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 22px;
+            padding: 16px 20px;
+            border: 1px solid var(--green);
+            font-size: 11px;
+            font-weight: 600;
+            transition: background .2s, color .2s;
+        }
+
+        .contact-button:hover { background: var(--green); color: var(--cream); }
+
+        footer { padding: 28px 0; background: var(--cream); }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            font-family: var(--serif);
+            font-size: 23px;
+            letter-spacing: 2px;
+        }
+
+        .footer-logo span { color: #71836a; }
+
+        footer p, footer a { color: var(--muted); font-size: 10px; }
+        footer a:hover { color: var(--green); }
+        .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+
+        @media (max-width: 800px) {
+            .hero { grid-template-columns: 1fr; gap: 38px; padding-top: 58px; }
+            .hero-visual, .hero-visual img { min-height: 0; height: 460px; }
+            .section-head { align-items: flex-start; flex-direction: column; gap: 14px; }
+            .collection-grid { grid-template-columns: 1fr 1fr; }
+            .collection-card:last-child { grid-column: 1 / -1; }
+            .collection-card:last-child .collection-image img { height: 390px; }
+            .story { grid-template-columns: 1fr; }
+            .story-image, .story-image img { min-height: 350px; height: 350px; }
+            .contact-inner { align-items: flex-start; flex-direction: column; }
+        }
+
+        @media (max-width: 520px) {
+            .container { width: calc(100% - 36px); }
+            .concept-banner { font-size: 8px; letter-spacing: 1px; }
+            header { height: 72px; }
+            .logo { font-size: 26px; }
+            .nav-links { gap: 14px; }
+            .nav-links a { font-size: 10px; }
+            .nav-links a:first-child { display: none; }
+            .nav-cta { padding: 10px; font-size: 10px; }
+            .hero { padding-top: 45px; padding-bottom: 55px; }
+            h1 { font-size: clamp(48px, 13vw, 65px); letter-spacing: -2px; }
+            .hero-visual, .hero-visual img { height: 350px; }
+            .manifesto { padding: 48px 0; }
+            section.content-section { padding: 75px 0; }
+            .collection-grid { grid-template-columns: 1fr; gap: 32px; }
+            .collection-card:last-child { grid-column: auto; }
+            .collection-image img, .collection-card:last-child .collection-image img { height: 350px; }
+            .principles { grid-template-columns: 1fr; }
+            .principle, .principle:first-child {
+                padding: 22px 0;
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+            }
+            .principle:last-child { border-bottom: 0; }
+            .story-image, .story-image img { height: 280px; min-height: 280px; }
+            .story-copy { padding: 35px 25px; }
+            .contact { padding: 70px 0; }
+            .contact h2 { letter-spacing: -1.5px; }
+            .footer-inner { align-items: flex-start; flex-direction: column; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="concept-banner">
+        Concepto de diseño web · Proyecto conceptual de STUDIO 01
+    </div>
+
+    <header>
+        <div class="container nav">
+            <a class="logo" href="index.html" aria-label="Volver a STUDIO 01">VERDE<span>.</span></a>
+
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="#coleccion">Colección</a>
+                <a href="#historia">Nuestra visión</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <a class="nav-cta" href="#coleccion">Descubrir <span aria-hidden="true">↗</span></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero" aria-labelledby="hero-title">
+                <div>
+                    <div class="eyebrow">Una forma más consciente de vivir</div>
+
+                    <h1 id="hero-title">
+                        Menos ruido.<br>
+                        Más <em>esencia.</em>
+                    </h1>
+
+                    <p class="hero-copy">
+                        Un concepto de estilo de vida inspirado en los materiales
+                        naturales, los espacios tranquilos y los objetos que
+                        elegimos conservar. Vivir con intención, todos los días.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button" href="#coleccion">Explorar la colección <span aria-hidden="true">↘</span></a>
+                        <a class="text-link" href="#historia">Conoce nuestra visión <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <img
+                        src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=1400&q=85"
+                        alt="Interior sereno con materiales naturales y tonos neutros"
+                        fetchpriority="high"
+                    >
+                    <div class="image-caption">Espacios para respirar · 001</div>
+                </div>
+            </section>
+        </div>
+
+        <section class="manifesto">
+            <div class="container">
+                <div class="eyebrow">Nuestra idea</div>
+                <h2>
+                    No necesitas más cosas.
+                    Necesitas cosas que <em>signifiquen más.</em>
+                </h2>
+            </div>
+        </section>
+
+        <section class="content-section" id="coleccion">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">La colección</div>
+                        <h2>Esenciales para<br>vivir mejor.</h2>
+                    </div>
+                    <p>
+                        Tres áreas de inspiración que celebran lo simple:
+                        materiales honestos, ambientes equilibrados y rituales
+                        cotidianos que merecen su propio espacio.
+                    </p>
+                </div>
+
+                <div class="collection-grid">
+                    <article class="collection-card">
+                        <div class="collection-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=85"
+                                alt="Espacio interior minimalista con decoración natural"
+                                loading="lazy"
+                            >
+                            <span class="collection-number">01 / ESPACIOS</span>
+                        </div>
+                        <div class="collection-info">
+                            <div>
+                                <h3>Espacios</h3>
+                                <p>Ambientes serenos, luz y texturas naturales.</p>
+                            </div>
+                            <span class="collection-arrow" aria-hidden="true">↗</span>
+                        </div>
+                    </article>
+
+                    <article class="collection-card">
+                        <div class="collection-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=900&q=85"
+                                alt="Objetos de diseño y materiales de tonos naturales"
+                                loading="lazy"
+                            >
+                            <span class="collection-number">02 / OBJETOS</span>
+                        </div>
+                        <div class="collection-info">
+                            <div>
+                                <h3>Objetos</h3>
+                                <p>Diseño funcional que se integra a tu vida.</p>
+                            </div>
+                            <span class="collection-arrow" aria-hidden="true">↗</span>
+                        </div>
+                    </article>
+
+                    <article class="collection-card">
+                        <div class="collection-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85"
+                                alt="Ambiente tranquilo dedicado al descanso y bienestar"
+                                loading="lazy"
+                            >
+                            <span class="collection-number">03 / RITUALES</span>
+                        </div>
+                        <div class="collection-info">
+                            <div>
+                                <h3>Rituales</h3>
+                                <p>Pequeños momentos para volver a ti.</p>
+                            </div>
+                            <span class="collection-arrow" aria-hidden="true">↗</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="historia">
+            <div class="container">
+                <div class="story">
+                    <div class="story-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85"
+                            alt="Espacio de estilo natural con materiales y tonos cálidos"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="story-copy">
+                        <div class="eyebrow">La visión VERDE</div>
+                        <h2>Elegir menos también es una forma de avanzar.</h2>
+                        <p>
+                            VERDE nace como un concepto de marca que busca
+                            conectar diseño y vida cotidiana. Una identidad
+                            visual que deja espacio para respirar y pone
+                            atención en lo esencial.
+                        </p>
+                        <p>
+                            No se trata de perseguir la perfección, sino de
+                            construir una relación más intencional con los
+                            espacios, los objetos y el tiempo.
+                        </p>
+                        <a class="button" href="#contacto">Conocer el concepto <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Lo que nos inspira</div>
+                        <h2>Una filosofía sencilla.</h2>
+                    </div>
+                </div>
+
+                <div class="principles">
+                    <article class="principle">
+                        <h3>Materiales honestos</h3>
+                        <p>Texturas, formas y acabados que no necesitan exagerar.</p>
+                    </article>
+
+                    <article class="principle">
+                        <h3>Diseño con intención</h3>
+                        <p>Elegir cada detalle por su función y su significado.</p>
+                    </article>
+
+                    <article class="principle">
+                        <h3>Tiempo para lo esencial</h3>
+                        <p>Crear espacios para bajar el ritmo y estar presentes.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contacto">
+            <div class="container contact-inner">
+                <div>
+                    <div class="eyebrow">Un concepto para explorar</div>
+                    <h2>Haz espacio<br>para lo esencial.</h2>
+                    <p>
+                        Esta página es una propuesta conceptual de identidad
+                        digital. La información comercial y los canales de
+                        contacto reales se incorporarían al desarrollar el proyecto.
+                    </p>
+                </div>
+
+                <a class="contact-button" href="index.html">
+                    Volver a STUDIO 01 <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <a class="footer-logo" href="index.html">VERDE<span>.</span></a>
+            <p>Concepto visual desarrollado para STUDIO 01.</p>
+            <div class="footer-links">
+                <a href="#coleccion">Colección</a>
+                <a href="#historia">Nuestra visión</a>
+                <a href="index.html">STUDIO 01 ↗</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

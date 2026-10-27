@@ -76,9 +76,7 @@ return `
 
         </div>
 
-        <span class="service-arrow" aria-hidden="true">
-            ↗
-        </span>
+        <span class="service-marker" aria-hidden="true"></span>
 
     </article>
 `;

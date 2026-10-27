@@ -131,6 +131,18 @@
     perspective: 1200px;
 }
 
+.showcase-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    min-width: 0;
+    outline-offset: 6px;
+}
+
+.showcase-link:focus-visible {
+    outline: 2px solid var(--color-text, #171918);
+}
+
 .showcase-card {
     position: relative;
     display: flex;
@@ -289,8 +301,22 @@
     letter-spacing: -0.045em;
 }
 
-.service-arrow {
-    font-size: 1.5rem;
+.service-marker {
+    width: 7px;
+    height: 7px;
+    display: block;
+    background-color: var(--color-text, #171918);
+    border-radius: 1px;
+    align-self: center;
+    justify-self: center;
+    transition: transform 0.3s ease, border-radius 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .service-item:hover .service-marker {
+        transform: translateX(5px) scale(1.25);
+        border-radius: 50%;
+    }
 }
 
 /* PROYECTOS */
@@ -2044,16 +2070,9 @@
     letter-spacing: 0;
 }
 
-.service-arrow {
+.service-marker {
     align-self: center;
-    color: var(--color-text, #171918);
-    transition: transform 0.3s ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .service-item:hover .service-arrow {
-        transform: translate(5px, -5px);
-    }
+    justify-self: center;
 }
 
 @media (max-width: 768px) {
@@ -2071,16 +2090,9 @@
         font-size: 0.85rem;
         line-height: 1.6;
     }
-
-    .service-arrow {
-        font-size: 1.2rem;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .service-arrow {
-        transition: none;
-    }
 }
 
 /* Título exclusivo de la sección de servicios */
